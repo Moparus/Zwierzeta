@@ -1,0 +1,14 @@
+img {
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}

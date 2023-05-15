@@ -1,0 +1,37 @@
+<html>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <button (click)="wybierzGatunek(Gatunek.ryby)" type="button" class="col btn btn-outline-light m-2">
+          Ryby
+        </button>
+        <button (click)="wybierzGatunek(Gatunek.gady)" type="button" class="col btn btn-outline-light m-2">
+          Gady
+        </button>
+        <button (click)="wybierzGatunek(Gatunek.plazy)" type="button" class="col btn btn-outline-light m-2">
+          Płazy
+        </button>
+        <button (click)="wybierzGatunek(Gatunek.ssaki)" type="button" class="col btn btn-outline-light m-2">
+          Ssaki
+        </button>
+      </div>
+      <div class="row">
+        <ng-container *ngIf="widocznoscPrzyciskow">
+          <button (click)="wybierzRodzaj(Rodzaj.ladowe)" type="button" class="col btn btn-outline-light m-2">
+            Lądowe
+          </button>
+          <button (click)="wybierzRodzaj(Rodzaj.wodne)" type="button" class="col btn btn-outline-light m-2">
+            Wodne
+          </button>
+          <button (click)="wybierzRodzaj(Rodzaj.latajace)" type="button" class="col btn btn-outline-light m-2">
+            Latające
+          </button>
+        </ng-container>
+      </div>
+      <div class="row mt-2">
+        <app-kolekcja *ngIf="widocznoscKolekcji" [tablicaWybranych]="this.tablicaWybranych" class="row justify-content-center"></app-kolekcja>
+      </div>
+    </div>
+  </body>
+</html>
+
